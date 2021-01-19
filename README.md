@@ -10,7 +10,7 @@ This simple Hy script syncs a local directory with a remote directory designated
 
 ### Running the script
 
-1. (At a local directory,) Place the script at a directory you want to sync with the remote directory.
+1. At the local machine, place the script at a directory you want to sync with the remote directory.
 2. Run the script as `hy sync.hy`
 3. Provide the followings as prompted:
     1. Remote address
