@@ -53,12 +53,12 @@
 (defn get-local-inventory []
   (setv mypath (os.path.relpath (os.getcwd))) ; NOTE if you're running this in a REPL, use (os.chdir "path")
   (setv inventory (dict))
-  (for [(, folder - file) (os.walk mypath)]
+  (for [(, folder _ file) (os.walk mypath)]
     (if (= folder mypath)
         (continue))
     (if (or (in " " folder) (not (in "\\" folder)))
         (setv folder (.replace folder " " "\\ ")))
-    (assoc inventory folder (set file-)))
+    (assoc inventory folder (set file)))
   inventory)
 
 
