@@ -6,7 +6,8 @@ This simple Hy script syncs a local directory with a remote directory designated
 
 ### Installing dependencies
 
-`pip install hy paramiko scp`
+- At local: `pip install hy paramiko scp`
+- At remote: `apt-get install tree` or `brew install tree`, depending on OS
 
 ### Running the script
 
@@ -15,7 +16,7 @@ This simple Hy script syncs a local directory with a remote directory designated
 3. Provide the followings as prompted:
     1. Remote address
     2. Remote username
-    3. Remote port (recall that ssh's port defaults to 22)
+    3. Remote port number (recall that ssh's port number defaults to 22)
     4. Remote password
     5. Target remote directory as absolute path
 
