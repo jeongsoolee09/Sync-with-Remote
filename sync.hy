@@ -109,7 +109,7 @@
 (defn make-missing-remote-directory [client local-path-list]
   (for [local-path local-path-list]
     (setv local-path (cut local-path 1))
-    (setv (, stdout -) (.exec-command client (+ "ls " *remote-directory* local-path)))
+    (setv (, stdout _) (.exec-command client (+ "ls " *remote-directory* local-path)))
     (if (= (list stdout) (list))
         (.exec-command client (+ "mkdir -p " *remote-directory* local-path)))))
 
