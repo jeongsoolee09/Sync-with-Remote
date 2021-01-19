@@ -142,12 +142,12 @@
   ;; get necessary information from the user
   (setv remote-address (input "Enter remote address: "))
   (setv remote-username (input "Enter remote username: "))
-  (setv remote-port (input "Enter remote port: "))
   (setv remote-password (getpass.getpass "Enter remote password: "))
+  (setv remote-port (input "Enter remote port: "))
   (setv *remote-directory* (input "Enter remote directory (absolute path): "))
 
   ;; connect with the above information and ssh client
-  (.connect ssh-client host-address :username "jslee" :password password :port host-port)
+  (.connect ssh-client remote-address :username remote-username :password remote-password :port remote-port)
 
   ;; fetch the remote inventory
   (setv folders (ssh-client get-remote-directories))
